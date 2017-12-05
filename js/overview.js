@@ -1,6 +1,6 @@
 var TECH = 1800;
 var HSE = 1200;
-
+var porcent = 0.7;
 // inicio de funcionalidad de Enrollment
 
 // obtiene el total de estudiantes
@@ -55,12 +55,12 @@ function enrollment(data, campus = campusDefault, cohort = cohortDefault) {
 
 // 70% de la cantidad total de puntos tech
 function metTech() {
-  return TECH * 0.7;
+  return TECH * porcent;
 }
 
 // 70% de la cantidad total de puntos hse
 function metHse() {
-  return HSE * 0.7;
+  return HSE * porcent;
 }
 
 function getTargetedStudents(students) {
@@ -120,6 +120,7 @@ function getActiveStudents(students) {
     }
   }
   return totalActiveStudents;
+  console.log(totalActiveStudents);
 }
 
 // crea un objeto para la funcionalidad de achievement
